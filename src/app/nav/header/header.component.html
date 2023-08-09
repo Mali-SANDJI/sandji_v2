@@ -2,52 +2,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Data Entry App</title>
 </head>
 <body>
-  <nav>
-    <a href="#daily">Daily</a>
-    <a href="#weekly">Weekly</a>
-    <a href="#decadal">Decadal</a>
-    <a href="#stations">Stations</a>
-  </nav>
-
-  <section id="daily">
-    <h2>Daily Data Entry</h2>
-    <form>
-      <label for="date">Date:</label>
-      <input type="date" id="date">
-      <select id="station">
-        <option value="">Select Station</option>
-      </select>
-      <input type="text" id="data">
-      <button type="submit">Submit</button>
-    </form>
-  </section>
-
-  <section id="weekly">
-    ...
-  </section>
-
-  <section id="decadal">
-    ...
-  </section>
-
-  <section id="stations">
-    ...
-  </section>
-
-  <button id="export">Export Data</button>
-  <button id="import">Import Data</button>
+  <div class="header">
+    <!-- Add your header content here -->
+    <ul class="nav-menu">
+      <li><a href="#">Accueil</a></li>
+      <li>
+        <a >Saisie</a>
+        <ul class="sub-menu">
+          <li><a href="#">Journalière</a></li>
+          <li><a href="#">Décaire</a></li>
+          <li><a href="#">Mensuelle</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Traitement</a></li>
+      <li><a href="#">Station</a></li>
+      <li><a href="#">Aide</a></li>
+    </ul>
+  </div>
 </body>
-
-<script>
-// JavaScript code to:
-
-// - Populate station dropdown
-// - Submit daily/weekly/decadal data
-// - Add/remove stations
-// - Export/import data using IPC
-</script>
-
 </html>
