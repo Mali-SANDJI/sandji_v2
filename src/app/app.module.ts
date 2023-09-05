@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
 import { HeaderComponent } from './nav/header/header.component';
 import { FooterComponent } from './nav/footer/footer.component';
 import { JournaliereComponent } from './saisie/journaliere/journaliere.component';
@@ -26,7 +27,8 @@ import { StationsComponent } from './stations/stations.component';
     StationsComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
