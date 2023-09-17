@@ -7,4 +7,19 @@ import { Component } from '@angular/core';
 })
 export class StationsComponent {
 
+
+  stations!: StationsComponent[];
+  option!: string;
+  inputs!: string[];
+  dates!: string[];
+  
+
+
+  onOptionChange(option: string) {
+    this.option = option;
+  }
+
+  onDateChange(date: string, index: number) {
+    this.dates[index] = date;
+  }
 }

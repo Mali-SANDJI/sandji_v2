@@ -1,16 +1,13 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HeaderComponent } from './nav/header/header.component';
 import { FooterComponent } from './nav/footer/footer.component';
-import { JournaliereComponent } from './saisie/journaliere/journaliere.component';
-import { DecadaireComponent } from './saisie/decadaire/decadaire.component';
-import { MensuelleComponent } from './saisie/mensuelle/mensuelle.component';
-import { HebdomadaireComponent } from './traitement/hebdomadaire/hebdomadaire.component';
-import { InfoComponent } from './info/info.component';
-import { ImpExpComponent } from './imp-exp/imp-exp.component';
+import { JournalierComponent } from './saisie/journalier/journalier.component';
+import { HomeComponent } from './home/home.component';
 import { StationsComponent } from './stations/stations.component';
 
 @NgModule({
@@ -18,17 +15,14 @@ import { StationsComponent } from './stations/stations.component';
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    JournaliereComponent,
-    DecadaireComponent,
-    MensuelleComponent,
-    HebdomadaireComponent,
-    InfoComponent,
-    ImpExpComponent,
-    StationsComponent
+    JournalierComponent,
+    HomeComponent,
+    StationsComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

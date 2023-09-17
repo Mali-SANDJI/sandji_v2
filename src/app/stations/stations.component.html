@@ -1,1 +1,10 @@
 <p>stations works!</p>
+<div *ngFor="let station of stations">
+  <h3>{{ station }}</h3>
+  <select *ngIf="option === 'single'">
+    <option *ngFor="let input of inputs" [value]="input">{{ input }}</option>
+  </select>
+  <div *ngIf="option === 'multiple'">
+    <input type="date" *ngFor="let date of dates" [value]="date">
+  </div>
+</div>

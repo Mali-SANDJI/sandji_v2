@@ -1,26 +1,20 @@
-
-<!DOCTYPE html>
-<html>
-<head>
-</head>
-<body>
   <div class="header">
     <!-- Add your header content here -->
     <ul class="nav-menu">
-      <li><a href="#">Accueil</a></li>
+      <li><a routerLink="/home">Accueil</a></li>
       <li>
-        <a >Saisie</a>
-        <ul class="sub-menu">
-          <li><a href="../../saisie/journaliere/journaliere.component.html">Journalière</a></li>
-          <li><a href="../../saisie/decadiare/decadiare.component.html">Décaire</a></li>
-          <li><a href="../../saisie/mensuelle/mensuelle.component.html" routerLink="/mensuelle">Mensuelle</a></li>
-        </ul>
+        <a routerLink="/jour">Saisie</a>
+        <!-- <ul class="sub-menu"> -->
+          <!-- <li><a >Journalière</a></li>
+          <li><a >Décaire</a></li>
+          <li><a >Mensuelle</a></li> -->
+        <!-- </ul> -->
       </li>
       <li>
         <a href="#">Traitement</a>
         <ul class="sub-menu">
-          <li><a href="../../traitement/hebdomadaire/hebdomadaire.component.html">Com_Verballe</a></li>
-          <li><a href="./../../traitement/decadaire/decadaire.component.html">GTPA</a></li>
+          <li><a >Com_Verballe</a></li>
+          <li><a >GTPA</a></li>
 
         </ul>
       </li>
@@ -28,5 +22,3 @@
       <li><a href="#">Aide</a></li>
     </ul>
   </div>
-</body>
-</html>
