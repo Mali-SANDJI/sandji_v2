@@ -2,7 +2,13 @@
   <header>
     <app-header></app-header>
   </header>
-  <app-stations></app-stations>
+  <form [formGroup]="stationsForm" (ngSubmit)="onSubmit()" class="saisirdonnee">
+    <select formControlName="stationName">
+      <option *ngFor="let station of stations" [value]="station.name">{{station.name}}</option>
+    </select>
+    <input type="number" formControlName="dailyInput">
+    <button type="submit">Submit</button>
+  </form>
 </div>
 <footer>
   <app-footer></app-footer>

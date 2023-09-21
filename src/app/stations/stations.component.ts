@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { Station } from './station';
+import { FormControl, FormGroup } from '@angular/forms';
+import { StationsService } from '../Services/stations.service';
 
 @Component({
   selector: 'app-stations',
@@ -7,19 +10,33 @@ import { Component } from '@angular/core';
 })
 export class StationsComponent {
 
+  displayedColumns: string[] = ['code_station', 'nom_station', 'long', 'lat', 'actions'];
+  dataSource = [];
 
-  stations!: StationsComponent[];
-  option!: string;
-  inputs!: string[];
-  dates!: string[];
-  
+  constructor(private stationService: StationsService) { }
 
-
-  onOptionChange(option: string) {
-    this.option = option;
+  ngOnInit(): void {
+    this.getStations();
   }
 
-  onDateChange(date: string, index: number) {
-    this.dates[index] = date;
+  getStations(): void {
+    this.stationService.getStations().subscribe((stations: never[]) => {
+      this.dataSource = stations;
+    });
   }
+
+  addStation(): void {
+    // Add your add station logic here
+  }
+
+  updateStation(station: any): void {
+    // Add your update station logic here
+  }
+
+  deleteStation(id: number): void {
+    this.stationService.deleteStation(id).subscribe(() => {
+      this.getStations();
+    });
+  }
+
 }

@@ -1,0 +1,12 @@
+<body>
+  <header> <!-- Votre en-tête ici --><app-header></app-header> </header>
+  <main> <!-- Votre contenu principal ici -->
+    <form action="/upload" method="post" enctype="multipart/form-data">
+      <input type="file" name="file"
+        accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel">
+      <button type="submit">Importer</button>
+    </form>
+    <img src="./../../assets/images/background.jpg" alt="Mali Météo">
+  </main>
+  <footer> <!-- Votre pied de page ici --> <app-footer></app-footer></footer>
+</body>

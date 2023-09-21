@@ -1,10 +1,25 @@
-<p>stations works!</p>
-<div *ngFor="let station of stations">
-  <h3>{{ station }}</h3>
-  <select *ngIf="option === 'single'">
-    <option *ngFor="let input of inputs" [value]="input">{{ input }}</option>
-  </select>
-  <div *ngIf="option === 'multiple'">
-    <input type="date" *ngFor="let date of dates" [value]="date">
-  </div>
-</div>
+<!-- stations.component.html -->
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  <!-- Code Station Column -->
+  <ng-container matColumnDef="code_station">
+    <th mat-header-cell *matHeaderCellDef> Code Station </th>
+    <td mat-cell *matCellDef="let station"> {{station.code_station}} </td>
+  </ng-container>
+  <!-- Other columns... -->
+
+  <!-- Actions Column -->
+  <ng-container matColumnDef="actions">
+    <th mat-header-cell *matHeaderCellDef> Actions </th>
+    <td mat-cell *matCellDef="let station">
+      <button mat-icon-button (click)="updateStation(station)">
+        <mat-icon>Modifier</mat-icon>
+      </button>
+      <button mat-icon-button (click)="deleteStation(station.id)">
+        <mat-icon>Supprimer</mat-icon>
+      </button>
+    </td>
+  </ng-container>
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+

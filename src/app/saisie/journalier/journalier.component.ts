@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 import { StationsComponent } from 'src/app/stations/stations.component';
 
 @Component({
@@ -6,20 +7,27 @@ import { StationsComponent } from 'src/app/stations/stations.component';
   templateUrl: './journalier.component.html',
   styleUrls: ['./journalier.component.css']
 })
-export class JournalierComponent {
+export class JournalierComponent implements OnInit {
 
-  stations!: StationsComponent[];
-  // option!: string;
-  // inputs: string[] = [];
-  // dates: string[] = [];
+  stationsForm!: FormGroup;
+  stations: any[] = []; // Add this line
 
+  ngOnInit() {
+    this.stationsForm = new FormGroup({
+      stationName: new FormControl(''),
+      dailyInput: new FormControl('')
+    });
 
-  // onOptionChange(option: string) {
-  //   this.option = option;
-  // }
+     // Populate the stations array here
+     this.stations = [
+      {name: 'Station 1'},
+      {name: 'Station 2'},
+      // Add more stations as needed
+    ];
+  }
 
-  // onDateChange(date: string, index: number) {
-  //   this.dates[index] = date;
-  // }
+  onSubmit() {
+    // Handle form submission here
+  }
 
 }
